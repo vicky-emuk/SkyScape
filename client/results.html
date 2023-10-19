@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SkyScape</title>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Gabarito&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/sun.png">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+    <div id="results-app">
+        <div class="container">
+            <div v-if="weatherData" class="results">
+            <h2 class="city-name">Weather in {{ weatherData.city }}</h2>
+            <div class="details">
+          <div>
+            <p>Temperature: {{ weatherData.temperature }} °C</p>
+            <p>Condition: {{ weatherData.condition }}</p>
+            <p>Packing: {{ weatherData.packing }}</p>
+            <p>Temperature Type: {{ weatherData.temp_type }}</p>
+    
+            <h3>Travel Readiness Score: {{ weatherData.travel_readiness_score }} / 100 </h3>
+            <p v-if="weatherData.pm25_level > 10">Safety Alert: PM2.5 level is high. Consider wearing a mask.</p>
+            <h3>5-Day Average Temperature Forecast</h3>
+            <div v-for="(temp, date) in weatherData.daily_forecast">
+                <p>{{ date }}: {{ temp.toFixed(2) }} °C</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>      
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="./results.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Make a background color */
+  body {
+    background: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px #000000;
+  }
+
+  .logo-header img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-header span {
+    font-size: 24px;
+    margin-left: 15px;
+  }
+
+  .logo-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .search-bar {
+    position: absolute;
+    top: calc(50% + 50px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px 0px #000000;
+    width: 400px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color: white;
+  }
+
+  .search-button {
+    position: absolute;
+    top: calc(50% + 110px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: #a7bfc5;
+    color: white;  /* White text */
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+  }
+
+  .icon img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0px 0px 10px 0px #000000;
+  }
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon p {
+    text-align: center;
+    margin-top: 10px;
+  }

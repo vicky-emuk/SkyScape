@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vue.js App</title>
+    <title>SkyScape</title>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Gabarito&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/sun.png">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body>
     <div id="app">
-        <search-component></search-component>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <header class="header">
+          <div class="logo-header">
+            <img src="./assets/sun.png" alt="SkyScape Logo">
+            <span>SKYSCAPE</span>
+          </div>
+          <div class="links">
+              <a href="https://github.com/vicky-emuk/SkyScape">GitHub</a>
+              <a href="https://openweathermap.org/api">API Documentation</a>
+          </div>
+        </header>
+        <div class="container">
+          <img src="./assets/SkyScape.png" alt="SkyScape Landscape">
+          <search-component ref="searchComponent" @update-weather-data="updateWeatherData"></search-component>
+          <button @click="handleButtonClick" class="search-button">Enter</button>
+      </div>
+      <footer class="footer">
+        <div class="icon" id="sun-icon">
+            <img src="./assets/sun.png">
+            <p>5-Day Weather Forecast</p>
+        </div>
+        <div class="icon" id="thermometer">
+          <img src="./assets/thermometer.png">
+          <p>Temperature</p>
+        </div>
+        <div class="icon" id="mask-icon">
+          <img src="./assets/mask.png">
+          <p>Air Pollution</p>
+        </div>
+        <div class="icon" id="umbrella-icon">
+          <img src="./assets/umbrella.png">
+          <p>Packing Advice</p>
+        </div>
+        <div class="icon" id="suitcase-icon">
+          <img src="./assets/suitcase.png">
+          <p>Travel Readiness Score</p>
+        </div>
 
-    <script type="module" src="./main.js"></script>
+    </footer>
+  </div>      
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
